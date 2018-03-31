@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        Todo list with NEJ
+    </title>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+    <div class="app" id="app">
+    </div> 
+<script src="./lib/nej/src/define.js"></script>
+<script src="./lib/regular.min.js"></script>
+
+<script src="./index.js"></script>
+<script>
+    NEJ.define([
+        './index.js'
+    ],function(m){
+        m._$$Module._$allocate();
+    });
+</script>
+</body>
+</html>  

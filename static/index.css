@@ -1,0 +1,122 @@
+body{
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+    height: 100%;
+    font-family: 'PingFangSC', 'Microsoft YaHei', 'Hiragino Sans GB', 'WenQuanYi Micro Hei';
+    color: #575b63;
+    font-size: 12px;
+}
+:focus {
+    outline: none;
+}
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: #aaa;
+  }
+.app{
+    width: 100%;
+    min-height: 100vh;
+    background: url('./img/background.png') no-repeat center;
+    background-size: 100% 100%;
+    box-sizing: border-box;
+    overflow-y: auto;
+}
+.title{
+    text-align: center;
+    margin: 20px 0px;
+    font-size: 4em;
+}
+.footer{
+    text-align: center;
+    width: 100%;
+    margin: 20px 0px;
+}
+.list-container{
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgba(255, 255, 255, 0.8);
+    width: 500px;
+    border-radius: 4px;
+}
+.list-container .input{
+    width: 480px;
+    border: none;
+    border-bottom: 1px solid #ddd;
+    padding: 10px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 1.5em;
+    color: #7a8394;
+    background-color: rgba(255, 255, 255, 0);
+}
+.list-item{
+    padding: 10px 0px;
+    border-bottom: 1px solid #ddd;
+}
+.list-item:hover .list-remove{
+    visibility: visible;
+}
+.active .chooseIcon{
+    border: 1px solid #5dc2af;
+    background: rgba(93, 194, 175, 0.2);
+}
+.chooseIcon{
+    display: inline-block;
+    margin: 13px 5px;
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    cursor: pointer;
+    float: left;
+    top: 10px;
+}
+.list-text{
+    display: inline-block;
+    line-height: 48px;
+    width: 430px;
+    font-size: 1.5em;
+    color: #7a8394;
+}
+.list-text span{
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+}
+.active .list-text span{
+    text-decoration: line-through;
+    color: #d9d9d9;
+}
+.list-remove{
+    display: inline-block;
+    float: right;
+    margin: 13px 5px;
+    width: 20px;
+    height: 20px;
+    font-size: 1.5em;
+    color: #7a8394;
+    visibility: hidden;
+    cursor: pointer;
+}
+.todo-bottom{
+    padding: 10px;
+}
+.todo-count{
+    display: inline-block;
+    color: #aaa;
+}
+.todo-type{
+    display: inline-block;
+    float: right;
+    margin-right: 20px;
+    cursor: pointer;
+    color: #aaa;
+    padding: 0px 5px;
+}
+.todo-type:hover{
+    color: #5dc2af;
+}
+.choosed{
+    color: #5dc2af;
+}

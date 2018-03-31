@@ -1,0 +1,33 @@
+<div>
+    <div class="title">
+        <span>todos</span>
+    </div>
+    <div class="list-container">
+        <input class="input" r-model={current} placeholder="What needs to be done?" type="text" on-keyup={this.onKeyup($event)} autofocus />
+        {#list todoList as item}
+        {#if visible === 'all' || visible === 'active'&&!item.completed || visible === 'completed'&&item.completed}
+        <div class="list-item" r-class={{'active': item.completed}}>
+            <div class="chooseIcon" on-click={this.check(item_index)}></div>
+            <div class="list-text">
+                <span>
+                    {item.value}
+                </span>
+            </div>
+            <div class="list-remove" on-click={this.remove(item_index)}>X</div>
+        </div>
+        {/if}
+        {/list}
+        <div class="todo-bottom">
+            <div class="todo-count">
+                {count} items left {todo.count}
+            </div>
+            <div class="todo-type" r-class={{'choosed': visible === 'all'}} on-click={this.change('all')}>All</div>
+            <div class="todo-type" r-class={{'choosed': visible === 'active'}} on-click={this.change('active')}>Active</div>
+            <div class="todo-type" r-class={{'choosed': visible === 'completed'}} on-click={this.change('completed')}>Complete</div>
+        </div>
+    </div>
+    <div class="footer">
+        <p>Written by summer</p>
+        <p>Image from 500px: <a target="_black" href=" https://500px.me/community/photo-details/500px248408327"> https://500px.me/community/photo-details/500px248408327</a></p>
+    </div>
+</div>

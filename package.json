@@ -1,0 +1,17 @@
+{
+    "name": "nej-todo",
+    "version": "1.0.0",
+    "description": "Todo List with NEJ",
+    "main": "app.js",
+    "scripts": {
+        "app": "node app.js",
+        "debug": "node --inspect app.js"
+    },
+    "author": "Summer Wang",
+    "license": "ISC",
+    "dependencies": {
+        "express": "^4.16.3",
+        "mongodb": "^3.0.5",
+        "q": "^1.5.1"
+    }
+}
